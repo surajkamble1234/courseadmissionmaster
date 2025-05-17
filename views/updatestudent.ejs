@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Update STUDENT</title>
+        <link rel="stylesheet" href="updatestudent.css">
+    </head>
+
+    <body>
+        <%- include("nav.ejs")%>
+        <form action="/finalupdatestudent" method="post">
+        <div class="container">
+           <input type="hidden" name="sid" value="<%=upstudentdata[0].sid%>">
+            <input type="text" name="sname" value="<%=upstudentdata[0].sname%>"  >
+            <br><br>
+            <input type="text" name="semail" value="<%=upstudentdata[0].semail%>" >
+            <br><br>
+            <input type="text" name="scontact" value="<%=upstudentdata[0].scontact%>" >
+            <br><br>
+
+            <label for="course">choose course:</label>
+            <select name="cid" id="course">
+              <% upcoursedata.forEach((item)=>{%>
+                  <option value="<%=item.cid%>"><%=item.cname%></option>
+               
+               <%
+               });
+               %>
+            </select>
+            <br><br>
+            
+            <input type="submit" value="Update Student" >
+            <label for=""></label>
+        </div>
+    </form>
+    </body>
+</html>

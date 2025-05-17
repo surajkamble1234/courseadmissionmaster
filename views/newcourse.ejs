@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Add Course</title>
+        <link rel="stylesheet" href="newcourse.css">
+        <script type="text/javascript" src="coursevalidation.js"></script>
+    </head>
+
+    <body>
+        <%- include("nav.ejs") %>
+        <form action="/save" method="post" onsubmit=" return submitform()">
+            <div class="container">
+                <div class="course">
+                    <input type="text" name="cname" value="" required placeholder="Enter the course name" onkeyup="coursevalidation(this.value)">
+                    &nbsp;&nbsp;
+                    <span id="cone"></span>
+                     <br>
+                    <input id="csubmit" type="submit" value="Add New Course">
+                    <span id="h"></span>
+                    <label id="mess"><%= msg %></label>
+                </div>
+              
+            </div>
+        </form>
+       
+    </body>
+</html>

@@ -1,0 +1,37 @@
+
+.container{
+    width: 100%;
+    min-height: 600px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px;
+    background-image: url(images/coursebackground.avif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.container input{
+    width: 500px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin: auto;
+}
+label{
+    font-size: 1.2em;
+    font-weight: bold;
+ 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+select{
+    width: 500px;
+    height: 40px;
+    margin-left: 509px;
+}
+option{
+    width: 20%;
+    height: 40px;
+}

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Update Course</title>
+        <link rel="stylesheet" href="newcourse.css">
+    </head>
+
+    <body>
+        <%- include("nav.ejs") %>
+        <form action="/finalupdatedata" method="post">
+            <div class="container">
+                <input type="hidden" name="cid" value="<%= courseupdate[0].cid %>" placeholder="Enter the course id">
+                <br><br>
+
+                <input type="text" name="cname" value="<%=courseupdate[0].cname%>" >
+    
+                <input type="submit" value="Update Course">
+            </div>
+        </form>
+       
+    </body>
+</html>

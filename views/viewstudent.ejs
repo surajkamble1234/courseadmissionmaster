@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>View Course</title>
+        <link rel="stylesheet" href="viewstudent.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script type="text/javascript" src="ajaxview.js"></script>
+    </head>
+
+    <body>
+        <%- include("nav.ejs")%>
+        <div class="container">
+            <input type="text" name="search" id="nId"  style="width: 100%;" placeholder="Search...." onkeyup="ajaxImpl(this.value)">
+            &nbsp;&nbsp;
+            <table border="2" align="center" style="width: 100%;">
+                  <tr>
+                    <th>SRNO</th>
+                    <th>SNAME</th>
+                    <th>SEMAIL</th>
+                    <th>SCONTACT</th>
+                    <th>SCOURSENAME</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+                  </tr>
+
+                    <tbody id="tblbody">
+                        
+                           <% if(viewdata.length==0)
+                              {
+                            %>
+                            <td colspan="7"><h2 >There is no data is present</h2></td>
+                             <%
+                              }else{
+                                 viewdata.forEach((item,index)=>{
+                            %>
+                         
+                            <tr>
+                                <td><%= (index+1) %></td> 
+                                <td><%= item.sname  %></td>
+                                <td><%= item.semail  %></td>
+                                <td><%= item.scontact  %></td>
+                                <td><%= item.cname  %></td>
+                                <td><a href="/delByIdStudent?ssid=<%= item.sid%>"><i class="fa-solid fa-trash"></i></a></td>
+                                <td><a href="/updateByIdStudent?ssid=<%= item.sid%>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                            </tr>
+                             <%
+                              });
+                              }
+                              
+                              %>
+                            
+                    </tbody>
+                
+            </table>
+        </div>
+    </body>
+</html>

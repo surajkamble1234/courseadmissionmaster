@@ -1,0 +1,157 @@
+
+.container{
+    width: 97.2%;
+    min-height: 600px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px;
+    background-image: url(images/coursebackground.avif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.container input{
+    width: 500px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin: auto;
+}
+.container button
+{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin: auto;
+    
+}
+.container label{
+    width: 500px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin: auto;
+}
+
+select {
+    width: 500px;
+    height: 40px;
+    display: block;
+    margin: 40px auto 0 auto;
+}
+
+option{
+    width: 20%;
+    height: 40px;
+}
+span{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.course{
+    width: 38%;
+    min-height: 180px;
+    box-shadow: 10px 10px 10px 10px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 50px;
+    display: block;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+.course input
+{
+     width: 400px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin: auto;
+}
+#csubmit
+{
+    background-color: rgb(50, 148, 218);
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+    .container input,
+    .container button,
+    .container label,
+    select {
+        width: 90%;
+    }
+
+    .course {
+        width: 90%;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .course input {
+        width: 90%;
+    }
+
+    span {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .course {
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 939px) {
+    .container input,
+    .container button,
+    .container label,
+    select {
+        width: 90%;
+    }
+
+    .course {
+        width: 90%;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .course input {
+        width: 90%;
+    }
+
+    span {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+

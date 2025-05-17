@@ -1,0 +1,70 @@
+.container{
+    width: 100%;
+    min-height: 600px;
+    margin: auto;
+    border: 2px solid black;
+    padding-top: 20px;
+    background-image: url(images/coursebackground.avif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.container h2{
+    text-align: center;
+    color: pink;
+}
+.container table
+{
+    background:linear-gradient(red orange pink);
+    background-color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        background-size: cover;
+        min-height: auto;
+    }
+
+    .container table {
+        font-size: 14px;
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .container table th,
+    .container table td {
+        padding: 8px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+        background-size: cover;
+        min-height: auto;
+    }
+
+    .container table {
+        font-size: 14px;
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .container table th,
+    .container table td {
+        padding: 8px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+}

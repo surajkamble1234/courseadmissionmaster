@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>CWDATA</title>
+        <link rel="stylesheet" href="coursewisestudent.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <form action="/studentreport" method="get">
+        <%- include("nav.ejs") %>
+        <div class="container">
+            <label for="choose" >Choose Course</label>
+            <select name="cid" id="choose" onchange="this.form.submit()" >
+                    <% countco.forEach((item)=>{ %>
+                    <option value="<%= item.cid %>"><%=item.cname%></option>
+                    <option value="<%= item.cid %>"><%=item.cname%></option>
+                  <%
+                    });
+                  %>
+            </select>
+
+         
+            <table border="2" align="center" style="width: 100%;">
+                <tr>
+                    <th>CourseID</th>
+                    <th>EnrolledStudentCount</th>
+                </tr>
+             
+                <% if (countst.length > 0) {
+                countst.forEach((item) => { %>
+                 <tr>
+                    <td><%= item.cid %></td>
+                    <td><%= item.studentcount %></td>
+                    </tr>
+                <%  });
+                    } %>
+
+              
+                  
+            </table>
+
+          
+
+        </div>
+    </form>
+    </body>
+</html>

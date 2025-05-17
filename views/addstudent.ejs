@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>ADD STUDENT</title>
+        <link rel="stylesheet" href="addstudent.css">
+        <script type="text/javascript" src="/studentvalidation.js"></script>
+    </head>
+
+    <body>
+        <%- include("nav.ejs")%>
+        <form id="frm" name="frm" action="/savestudent" method="POST" onsubmit="return submitForm()">
+        <div class="container">
+            <div class="course">
+            <input type="text" name="sname" id="n" value="" required placeholder="Enter Name" onkeyup="validateStudent(this.value)" >
+            &nbsp;&nbsp;
+            <span id="sone"></span>
+            <input type="text" name="semail" id="em" value="" required placeholder="Enter Email" onkeyup="validateEmail(this.value)">
+            <span id="eone"></span>
+            &nbsp;
+            <input type="text" name="scontact" id="c" value="" required  placeholder="Enter Contact" onkeyup="validateContact(this.value)">
+            &nbsp;&nbsp;
+            <span id="cone"></span>
+
+            <label for="course">choose course:</label>
+            <select name="cid" id="course">
+                <%  coursedata.forEach((item) => { %>
+                  <option value="<%= item.cid %>"><%= item.cname %></option>
+                <%
+                });
+                %>
+               
+            </select>
+            <br><br>
+            <input id="ssubmit" type="submit" value="Add Student">
+            <span  id="msg" ><%=msg%></span>
+            <span id="h"></span>
+            </div>
+        </div>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+.container{
+    width: 100%;
+    min-height: 600px;
+    margin: auto;
+    border: 2px solid black;
+    background-image: url(images/coursebackground.avif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.container h2{
+    text-align: center;
+    color: pink;
+}
+.container table
+{
+    background:linear-gradient(red orange pink);
+    background-color: white;
+    text-align: center;
+}
+.container select {
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.container label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        background-size: cover;
+        min-height: auto;
+    }
+
+    .container label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .container select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .container table {
+        font-size: 14px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .container table th,
+    .container table td {
+        padding: 8px;
+        word-break: break-word;
+    }
+
+    .container h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container label {
+        font-size: 15px;
+    }
+
+    .container select {
+        font-size: 13px;
+    }
+
+    .container table th,
+    .container table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .container h2 {
+        font-size: 16px;
+    }
+}
